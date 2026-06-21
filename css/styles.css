@@ -1,0 +1,204 @@
+/* =========================================================================
+   Evi & Pepe — custom styles on top of Tailwind CDN.
+   Green theme (matches the Save the Date):
+     deep green #19332B · ivory #F5F0E5 · gold #C9AB70 · charcoal-green #2C2824
+   Mobile-first; tap targets >=44px; no horizontal overflow.
+   ========================================================================= */
+
+:root {
+  --green:  #19332B;
+  --greenL: #27483D;
+  --ivory:  #F5F0E5;
+  --gold:   #C9AB70;
+  --goldD:  #A8884E;
+  --ink:    #2C2824;
+  --sage:   #D6CDBA;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { line-height: 1.65; }
+*, *::before, *::after { min-width: 0; } /* guard against flex/grid overflow */
+
+::selection { background: var(--gold); color: var(--green); }
+
+/* ----- nav: transparent over hero, ivory once scrolled ----- */
+#nav { color: var(--ivory); }
+#nav.scrolled {
+  background: rgba(245, 240, 229, 0.95);
+  backdrop-filter: blur(10px);
+  color: var(--green);
+  box-shadow: 0 1px 0 rgba(25, 51, 43, 0.10);
+}
+.nav-link { position: relative; opacity: 0.85; transition: opacity .2s; }
+.nav-link:hover { opacity: 1; }
+.nav-link::after {
+  content: ""; position: absolute; left: 0; bottom: -5px; height: 1.5px; width: 0;
+  background: var(--gold); transition: width .25s;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* language switcher — tappable */
+.lang-switch { flex: none; }
+.lang-btn {
+  min-width: 34px; min-height: 40px;
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0 0.45rem; transition: all .2s; opacity: 0.7;
+}
+.lang-btn:hover { opacity: 1; }
+.lang-btn.active { background: var(--gold); color: var(--green); opacity: 1; }
+
+/* mobile menu links */
+.mm-link { display: inline-flex; align-items: center; min-height: 48px; padding: 0 1rem; }
+
+/* ----- hero ----- */
+.hero-ph { filter: blur(20px); transform: scale(1.1); }
+.hero-img.loaded { opacity: 1 !important; }
+
+/* ----- reveal on scroll ----- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  .animate-bounce { animation: none; }
+}
+
+/* ----- typographic helpers ----- */
+.kicker {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase; letter-spacing: 0.22em; font-size: 0.95rem;
+  font-weight: 700; color: var(--green); margin-bottom: 0.7rem;
+}
+h2.h2, .h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 500; line-height: 1.03;
+  font-size: clamp(2.75rem, 8vw, 4.75rem);
+  color: var(--green);
+}
+/* thin gold rule under headings (Save-the-Date feel) */
+.rule { display: block; width: 56px; height: 2px; background: var(--gold); margin-top: 1rem; }
+.lead { font-size: 1.1rem; color: #4a4640; }
+.note {
+  background: #fff; border: 1px solid rgba(25, 51, 43, 0.14);
+  border-left: 4px solid var(--gold);
+  border-radius: 0.75rem; padding: 1rem 1.25rem; font-size: 0.95rem; color: #4a4640;
+}
+.dt { font-family: "Montserrat", sans-serif; font-size: 0.68rem; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 700; color: var(--green); }
+.lnk { color: var(--goldD); text-decoration: underline; text-underline-offset: 2px; font-weight: 600; }
+.lnk:hover { color: var(--green); }
+
+/* ----- placeholder badge (TBD) ----- */
+.tbd {
+  display: inline-block; background: rgba(201, 171, 112, 0.22); color: var(--goldD);
+  border: 1px dashed var(--gold); border-radius: 0.4rem;
+  padding: 0 0.4rem; font-size: 0.78em; font-weight: 700;
+  letter-spacing: 0.03em; white-space: nowrap;
+}
+
+/* ----- cards ----- */
+.card {
+  background: #fff; border: 1px solid rgba(25, 51, 43, 0.10);
+  border-radius: 1rem; padding: 1.75rem;
+  box-shadow: 0 6px 24px rgba(25, 51, 43, 0.06);
+}
+.photo-frame { border-radius: 1rem; box-shadow: 0 14px 44px rgba(25, 51, 43, 0.20); }
+
+.btn-outline {
+  display: inline-flex; align-items: center; gap: .4rem;
+  min-height: 44px;
+  border: 1.5px solid var(--green); color: var(--green);
+  border-radius: 9999px; padding: 0.5rem 1.15rem;
+  font-family: "Montserrat", sans-serif; font-size: 0.78rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em; transition: all .2s;
+}
+.btn-outline:hover { background: var(--green); color: var(--ivory); }
+/* outline buttons inside green cards */
+.bg-green .btn-outline { border-color: var(--gold); color: var(--gold); }
+.bg-green .btn-outline:hover { background: var(--gold); color: var(--green); }
+
+/* ----- countdown ----- */
+.cd-num { font-family: "Cormorant Garamond", serif; font-size: clamp(2.4rem, 11vw, 4.5rem); font-weight: 500; line-height: 1; }
+.cd-lbl { font-family: "Montserrat", sans-serif; text-transform: uppercase; letter-spacing: 0.14em; font-size: 0.62rem; opacity: 0.75; margin-top: 0.4rem; }
+.cd-sep { font-family: "Cormorant Garamond", serif; font-size: clamp(2rem, 9vw, 3.5rem); line-height: 1; color: var(--gold); align-self: start; opacity: 0.6; }
+
+/* ----- timeline ----- */
+.timeline { position: relative; list-style: none; padding-left: 0; }
+.timeline::before {
+  content: ""; position: absolute; left: 7px; top: 6px; bottom: 6px;
+  width: 2px; background: linear-gradient(var(--green), var(--gold));
+}
+.tl-item { position: relative; padding-left: 2.25rem; padding-bottom: 1.6rem; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-item::before {
+  content: ""; position: absolute; left: 0; top: 4px; width: 16px; height: 16px;
+  border-radius: 9999px; background: var(--ivory); border: 3px solid var(--green);
+}
+.tl-item.highlight::before { background: var(--gold); border-color: var(--gold); }
+.tl-time { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--green); font-size: 0.82rem; letter-spacing: 0.02em; }
+.tl-label { color: #44403a; }
+
+/* ----- bus cards ----- */
+.bus-card {
+  display: flex; flex-direction: column; gap: .35rem;
+  background: var(--ivory); border: 1px solid rgba(25,51,43,.10);
+  border-radius: 0.75rem; padding: 1rem;
+}
+.bus-time { font-family: "Cormorant Garamond", serif; font-size: 1.6rem; line-height: 1; color: var(--green); }
+
+/* ----- weekend rows ----- */
+.wk-row { background: #fff; border: 1px solid rgba(25,51,43,.10); border-radius: 0.9rem; padding: 1.1rem 1.35rem; }
+.wk-day { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--green); margin-bottom: 0.25rem; font-size: 0.95rem; }
+
+/* ----- gtk cards ----- */
+.gtk-card { background: #fff; border: 1px solid rgba(25,51,43,.10); border-radius: 0.9rem; padding: 1.25rem; }
+.gtk-card h3 { font-family: "Montserrat", sans-serif; font-weight: 700; color: var(--green); margin-bottom: 0.3rem; font-size: 0.95rem; }
+.gtk-card p { font-size: 0.92rem; color: #4a4640; }
+
+/* ----- FAQ accordion ----- */
+.faq-item { border-bottom: 1px solid rgba(25,51,43,.16); }
+.faq-q {
+  width: 100%; text-align: left; display: flex; justify-content: space-between; align-items: center;
+  gap: 1rem; padding: 1.1rem 0; min-height: 56px; font-weight: 600; font-size: 1.05rem; cursor: pointer; color: var(--green);
+}
+.faq-q .chev { transition: transform .25s; color: var(--gold); flex: none; font-size: 1.4rem; line-height: 1; }
+.faq-item.open .faq-q .chev { transform: rotate(45deg); }
+.faq-a { max-height: 0; overflow: hidden; transition: max-height .3s ease; color: #4a4640; }
+.faq-a > div { padding-bottom: 1.1rem; }
+
+/* ----- RSVP form ----- */
+.lbl { display: block; font-family: "Montserrat", sans-serif; font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; color: inherit; }
+.inp {
+  width: 100%; background: var(--ivory); border: 1.5px solid rgba(25,51,43,.20); border-radius: 0.7rem;
+  padding: 0.75rem 0.9rem; font-size: 1rem; color: var(--ink); min-height: 48px;
+  transition: border-color .2s, box-shadow .2s; font-family: "Montserrat", sans-serif;
+}
+.inp:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,171,112,.35); }
+.help { font-size: 0.78rem; color: rgba(245,240,229,0.6); margin-top: 0.4rem; }
+
+.radio-card { cursor: pointer; }
+.radio-face {
+  display: flex; align-items: center; justify-content: center; text-align: center;
+  min-height: 48px;
+  border: 1.5px solid rgba(245,240,229,.35); border-radius: 0.7rem;
+  padding: 0.7rem 0.6rem; font-weight: 600; font-size: 0.95rem; transition: all .2s; height: 100%;
+  background: rgba(245,240,229,.05);
+}
+.radio-card.sm .radio-face { font-size: 0.9rem; }
+.radio-card:hover .radio-face { border-color: var(--gold); }
+.peer:checked ~ .radio-face { background: var(--gold); border-color: var(--gold); color: var(--green); }
+
+.check-row {
+  display: flex; align-items: center; gap: 0.6rem; cursor: pointer; min-height: 48px;
+  background: rgba(245,240,229,.05); border: 1.5px solid rgba(245,240,229,.3); border-radius: 0.6rem; padding: 0.6rem 0.85rem;
+}
+.check-row input { width: 1.2rem; height: 1.2rem; accent-color: var(--gold); flex: none; }
+
+#rsvpMsg.ok  { background: var(--gold); color: var(--green); display: block; }
+#rsvpMsg.err { background: #efd6cf; color: #8a2f17; display: block; }
+
+/* ----- gallery ----- */
+.gal-img {
+  width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 0.7rem; cursor: pointer;
+  transition: transform .3s, box-shadow .3s; box-shadow: 0 4px 14px rgba(25,51,43,.10);
+}
+.gal-img:hover { transform: scale(1.02); box-shadow: 0 10px 28px rgba(25,51,43,.22); }
+#lightbox.show { display: flex; }

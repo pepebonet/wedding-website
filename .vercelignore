@@ -1,0 +1,5 @@
+# Original, unoptimized source photos — kept in git for re-processing,
+# but not needed in the deployed site (only the *.webp under images/ are served).
+images/src
+images/curated
+README.md

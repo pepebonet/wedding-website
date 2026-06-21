@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Evi &amp; Pepe · 28 May 2027 · Valencia</title>
+  <meta name="description" content="Evi & Pepe are getting married on Friday 28 May 2027 in Valencia, Spain. All the details: venue, schedule, travel, hotel and RSVP." />
+  <meta name="theme-color" content="#19332B" />
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ivory:  "#F5F0E5",
+            sand:   "#ECE4D2",
+            green:  "#19332B",
+            greenL: "#27483D",
+            gold:   "#C9AB70",
+            goldD:  "#A8884E",
+            ink:    "#2C2824",
+            sage:   "#D6CDBA",
+          },
+          fontFamily: {
+            display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans:    ['"Montserrat"', 'system-ui', 'sans-serif'],
+            script:  ['"Great Vibes"', 'cursive'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="bg-ivory text-ink font-sans antialiased overflow-x-hidden">
+
+  <!-- ============================== NAV ============================== -->
+  <header id="nav" class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+    <nav class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <a href="#hero" class="font-script text-2xl sm:text-3xl leading-none pt-1 whitespace-nowrap">Evi <span class="text-gold">&amp;</span> Pepe</a>
+
+      <!-- desktop links -->
+      <ul class="hidden lg:flex items-center gap-6 text-xs font-semibold uppercase tracking-widest">
+        <li><a class="nav-link" href="#story"    data-i18n="nav.story"></a></li>
+        <li><a class="nav-link" href="#details"  data-i18n="nav.details"></a></li>
+        <li><a class="nav-link" href="#schedule" data-i18n="nav.schedule"></a></li>
+        <li><a class="nav-link" href="#travel"   data-i18n="nav.travel"></a></li>
+        <li><a class="nav-link" href="#stay"     data-i18n="nav.stay"></a></li>
+        <li><a class="nav-link" href="#weekend"  data-i18n="nav.weekend"></a></li>
+        <li><a class="nav-link" href="#gifts"    data-i18n="nav.gifts"></a></li>
+        <li><a class="nav-link" href="#faq"      data-i18n="nav.faq"></a></li>
+      </ul>
+
+      <div class="flex items-center gap-2">
+        <!-- language switcher -->
+        <div class="lang-switch flex items-center rounded-full border border-current/25 overflow-hidden text-xs font-semibold">
+          <button data-lang="en" class="lang-btn">EN</button>
+          <button data-lang="es" class="lang-btn">ES</button>
+          <button data-lang="de" class="lang-btn">DE</button>
+        </div>
+        <a href="#rsvp" class="hidden sm:inline-flex nav-rsvp items-center rounded-full bg-green px-4 py-2 text-xs font-semibold uppercase tracking-wider text-ivory hover:bg-greenL transition-colors" data-i18n="nav.rsvp"></a>
+        <!-- hamburger -->
+        <button id="menuBtn" class="lg:hidden grid place-items-center w-11 h-11 -mr-2" aria-label="Menu" aria-expanded="false">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="fixed inset-0 z-40 bg-green text-ivory translate-x-full transition-transform duration-300 lg:hidden overflow-y-auto">
+    <div class="h-16"></div>
+    <ul class="flex flex-col items-center gap-1 mt-6 pb-12 text-3xl font-script">
+      <li><a class="mm-link" href="#story"    data-i18n="nav.story"></a></li>
+      <li><a class="mm-link" href="#details"  data-i18n="nav.details"></a></li>
+      <li><a class="mm-link" href="#schedule" data-i18n="nav.schedule"></a></li>
+      <li><a class="mm-link" href="#travel"   data-i18n="nav.travel"></a></li>
+      <li><a class="mm-link" href="#stay"     data-i18n="nav.stay"></a></li>
+      <li><a class="mm-link" href="#weekend"  data-i18n="nav.weekend"></a></li>
+      <li><a class="mm-link" href="#gifts"    data-i18n="nav.gifts"></a></li>
+      <li><a class="mm-link" href="#faq"      data-i18n="nav.faq"></a></li>
+      <li><a class="mm-link" href="#photos"   data-i18n="nav.photos"></a></li>
+      <li class="mt-4"><a href="#rsvp" class="mm-link inline-flex rounded-full bg-gold px-8 py-3 text-2xl text-green" data-i18n="nav.rsvp"></a></li>
+    </ul>
+  </div>
+
+  <!-- ============================== HERO ============================== -->
+  <section id="hero" class="relative h-[100svh] min-h-[560px] flex items-center justify-center text-center text-ivory overflow-hidden">
+    <div class="hero-ph absolute inset-0 bg-cover bg-center" style="background-image:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBMRXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAHaADAAQAAAABAAAAKAAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8IAEQgAKAAdAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAMCBAEFAAYHCAkKC//EAMMQAAEDAwIEAwQGBAcGBAgGcwECAAMRBBIhBTETIhAGQVEyFGFxIweBIJFCFaFSM7EkYjAWwXLRQ5I0ggjhU0AlYxc18JNzolBEsoPxJlQ2ZJR0wmDShKMYcOInRTdls1V1pJXDhfLTRnaA40dWZrQJChkaKCkqODk6SElKV1hZWmdoaWp3eHl6hoeIiYqQlpeYmZqgpaanqKmqsLW2t7i5usDExcbHyMnK0NTV1tfY2drg5OXm5+jp6vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAQIAAwQFBgcICQoL/8QAwxEAAgIBAwMDAgMFAgUCBASHAQACEQMQEiEEIDFBEwUwIjJRFEAGMyNhQhVxUjSBUCSRoUOxFgdiNVPw0SVgwUThcvEXgmM2cCZFVJInotIICQoYGRooKSo3ODk6RkdISUpVVldYWVpkZWZnaGlqc3R1dnd4eXqAg4SFhoeIiYqQk5SVlpeYmZqgo6SlpqeoqaqwsrO0tba3uLm6wMLDxMXGx8jJytDT1NXW19jZ2uDi4+Tl5ufo6ery8/T19vf4+fr/2wBDAA8PDw8PDxoPDxokGhoaJDEkJCQkMT4xMTExMT5LPj4+Pj4+S0tLS0tLS0taWlpaWlppaWlpaXZ2dnZ2dnZ2dnb/2wBDARITEx4cHjQcHDR7VEVUe3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3t7e3v/2gAMAwEAAhEDEQAAAX+rLJ0mC1hm7e6rsdJDaQIg1qJ0Smv/2gAIAQEAAQUCo6Ojo0z65odQAqfXlBqJSqlRyFdlDJej07YDv//aAAgBAxEBPwHa7e3/2gAIAQIRAT8B3u7t/9oACAEBAAY/Avu8XV6Pi6OlXor+Z//EADMQAQADAAICAgICAwEBAAACCwERACExQVFhcYGRobHB8NEQ4fEgMEBQYHCAkKCwwNDg/9oACAEBAAE/If8A8AQ7MaN0rOXKvpvh/X/kCNgsmk0bPr1SBY8CzfDcLl//2gAMAwEAAhEDEQAAEHcN4/8Ab//EADMRAQEBAAMAAQIFBQEBAAEBCQEAESExEEFRYSBx8JGBobHRweHxMEBQYHCAkKCwwNDg/9oACAEDEQE/EH6bV3Z7/9oACAECEQE/EDUmDnWB9//aAAgBAQABPxD/AIMyC54pJt7tqgQLwLDWAoEzZCHpY0ZIyAf7sBQsAMedolFDxIfVUIb8f3RaPCpBHkCgIAwctU/0FA9FgjRqvuebgAEFfIPxf//Z')"></div>
+    <img src="images/hero.webp" alt="Evi & Pepe embracing in a garden at golden hour" class="hero-img absolute inset-0 w-full h-full object-cover object-center opacity-0 transition-opacity duration-700" />
+    <div class="absolute inset-0 bg-gradient-to-b from-green/45 via-green/15 to-green/70"></div>
+
+    <div class="relative px-6 max-w-3xl reveal w-full">
+      <p class="uppercase tracking-[0.35em] text-[0.65rem] sm:text-xs font-semibold mb-4 text-ivory/90" data-i18n="hero.intro"></p>
+      <h1 class="font-script leading-[1.05] text-[clamp(2.5rem,12.5vw,6.5rem)] whitespace-nowrap">Evi <span class="text-gold">&amp;</span> Pepe</h1>
+      <p class="font-display text-2xl sm:text-3xl mt-3" data-i18n="hero.date"></p>
+      <p class="uppercase tracking-[0.22em] text-[0.7rem] sm:text-sm mt-3 text-ivory/90" data-i18n="hero.location"></p>
+      <a href="#rsvp" class="inline-flex mt-8 min-h-[48px] items-center rounded-full bg-gold px-9 py-3 text-sm font-semibold uppercase tracking-wider text-green hover:bg-goldD transition-colors shadow-lg" data-i18n="hero.cta"></a>
+    </div>
+
+    <a href="#countdown" class="absolute bottom-6 left-1/2 -translate-x-1/2 text-ivory/85 flex flex-col items-center gap-1 text-[10px] uppercase tracking-widest">
+      <span data-i18n="hero.scroll"></span>
+      <svg class="animate-bounce" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 9l6 6 6-6"/></svg>
+    </a>
+  </section>
+
+  <!-- ============================ COUNTDOWN =========================== -->
+  <section id="countdown" class="bg-green text-ivory py-14 px-6">
+    <div class="max-w-3xl mx-auto text-center reveal">
+      <p class="font-display text-2xl sm:text-3xl mb-7" data-i18n="countdown.heading"></p>
+      <div id="cdGrid" class="flex justify-center gap-3 sm:gap-10">
+        <div><div id="cd-days"  class="cd-num">--</div><div class="cd-lbl" data-i18n="countdown.days"></div></div>
+        <div class="cd-sep">:</div>
+        <div><div id="cd-hours" class="cd-num">--</div><div class="cd-lbl" data-i18n="countdown.hours"></div></div>
+        <div class="cd-sep">:</div>
+        <div><div id="cd-mins"  class="cd-num">--</div><div class="cd-lbl" data-i18n="countdown.minutes"></div></div>
+        <div class="cd-sep">:</div>
+        <div><div id="cd-secs"  class="cd-num">--</div><div class="cd-lbl" data-i18n="countdown.seconds"></div></div>
+      </div>
+      <p id="cdMarried" class="hidden font-script text-5xl text-gold" data-i18n="countdown.married"></p>
+    </div>
+  </section>
+
+  <!-- ============================= STORY ============================= -->
+  <section id="story" class="py-20 sm:py-28 px-6">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+      <div class="reveal order-2 md:order-1">
+        <p class="kicker" data-i18n="story.kicker"></p>
+        <h2 class="h2" data-i18n="story.title"></h2>
+        <span class="rule"></span>
+        <p class="lead mt-5" data-i18n="story.body"></p>
+      </div>
+      <div class="reveal order-1 md:order-2">
+        <img src="images/our-story.webp" alt="Evi & Pepe, affectionate" loading="lazy" class="photo-frame aspect-[4/5] w-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ DETAILS ============================ -->
+  <section id="details" class="py-20 sm:py-28 px-6 bg-sand">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center reveal max-w-2xl mx-auto">
+        <p class="kicker" data-i18n="details.kicker"></p>
+        <h2 class="h2" data-i18n="details.title"></h2>
+        <span class="rule mx-auto"></span>
+        <p class="lead mt-5" data-i18n="details.lead"></p>
+      </div>
+      <div class="mt-12 grid md:grid-cols-2 gap-8 reveal">
+        <div class="card">
+          <p class="mb-5" data-i18n="details.desc"></p>
+          <dl class="space-y-3 text-sm">
+            <div>
+              <dt class="dt" data-i18n="details.addressLabel"></dt>
+              <dd data-i18n="details.address"></dd>
+            </div>
+            <div>
+              <dt class="dt" data-i18n="details.contactLabel"></dt>
+              <dd>+34 658 370 392 · <a class="lnk" href="mailto:eltelar@miguelmarti.com">eltelar@miguelmarti.com</a></dd>
+            </div>
+          </dl>
+          <div class="flex flex-wrap gap-3 mt-6">
+            <a class="btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=El+Telar+de+Miguel+Mart%C3%AD+Benim%C3%A0met+Valencia" data-i18n="details.maps"></a>
+            <a class="btn-outline" target="_blank" rel="noopener" href="https://eltelardemiguelmarti.com" data-i18n="details.website"></a>
+          </div>
+        </div>
+        <div class="card bg-green text-ivory border-green">
+          <p class="dt !text-gold" data-i18n="details.dressLabel"></p>
+          <p class="mt-2 text-ivory/90" data-i18n="details.dress"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ SCHEDULE =========================== -->
+  <section id="schedule" class="py-20 sm:py-28 px-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center reveal">
+        <p class="kicker" data-i18n="schedule.kicker"></p>
+        <h2 class="h2" data-i18n="schedule.title"></h2>
+        <span class="rule mx-auto"></span>
+        <p class="mt-4 text-sm font-semibold text-goldD" data-i18n="schedule.seated"></p>
+      </div>
+      <ol id="timeline" class="timeline mt-12 reveal"></ol>
+      <p class="note mt-10 reveal" data-i18n="schedule.pacing"></p>
+    </div>
+  </section>
+
+  <!-- ============================= TRAVEL ============================ -->
+  <section id="travel" class="py-20 sm:py-28 px-6 bg-sand">
+    <div class="max-w-3xl mx-auto reveal">
+      <p class="kicker" data-i18n="travel.kicker"></p>
+      <h2 class="h2" data-i18n="travel.title"></h2>
+      <span class="rule"></span>
+      <p class="lead mt-5" data-i18n="travel.body"></p>
+      <p class="mt-4" data-i18n="travel.car"></p>
+    </div>
+  </section>
+
+  <!-- ============================== STAY ============================= -->
+  <section id="stay" class="py-20 sm:py-28 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center reveal max-w-2xl mx-auto">
+        <p class="kicker" data-i18n="stay.kicker"></p>
+        <h2 class="h2" data-i18n="stay.title"></h2>
+        <p class="inline-flex items-center gap-2 mt-4 rounded-full bg-green/10 text-green px-4 py-1.5 text-sm font-semibold">★ <span data-i18n="stay.recommended"></span></p>
+      </div>
+      <div class="mt-10 card reveal">
+        <p data-i18n="stay.desc"></p>
+        <dl class="grid sm:grid-cols-2 gap-4 mt-6 text-sm">
+          <div>
+            <dt class="dt" data-i18n="stay.addressLabel"></dt>
+            <dd data-i18n="stay.address"></dd>
+          </div>
+          <div>
+            <dt class="dt" data-i18n="stay.contactLabel"></dt>
+            <dd>+34 963 03 33 92 · <a class="lnk" href="mailto:reservas@olympiagrupo.com">reservas@olympiagrupo.com</a><br/>WhatsApp +34 644 773 066</dd>
+          </div>
+        </dl>
+        <div class="flex flex-wrap gap-3 mt-6">
+          <a class="btn-outline" target="_blank" rel="noopener" href="https://www.olympiahotelvalencia.com" data-i18n="stay.website"></a>
+          <a class="btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Olympia+Hotel+Events+Spa+Alboraya">Maps</a>
+        </div>
+        <p class="note mt-6"><span data-i18n="stay.roomblock"></span></p>
+        <p class="text-sm text-ink/70 mt-4" data-i18n="stay.alt"></p>
+      </div>
+
+      <!-- BUS -->
+      <div id="bus" class="mt-12 card reveal scroll-mt-24">
+        <p class="kicker !mt-0" data-i18n="bus.kicker"></p>
+        <h3 class="font-display text-3xl mb-3 text-green" data-i18n="bus.title"></h3>
+        <p data-i18n="bus.desc"></p>
+        <div class="grid sm:grid-cols-3 gap-4 mt-6">
+          <div class="bus-card"><span class="dt" data-i18n="bus.departLabel"></span><span class="bus-time" data-i18n="bus.depart"></span></div>
+          <div class="bus-card"><span class="dt" data-i18n="bus.earlyLabel"></span><span class="bus-time" data-i18n="bus.early"></span></div>
+          <div class="bus-card"><span class="dt" data-i18n="bus.finalLabel"></span><span class="bus-time" data-i18n="bus.final"></span></div>
+        </div>
+        <p class="note mt-6"><span data-i18n="bus.note"></span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ WEEKEND ============================ -->
+  <section id="weekend" class="py-20 sm:py-28 px-6 bg-sand">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center reveal max-w-2xl mx-auto">
+        <p class="kicker" data-i18n="weekend.kicker"></p>
+        <h2 class="h2" data-i18n="weekend.title"></h2>
+        <span class="rule mx-auto"></span>
+      </div>
+      <div class="mt-12 space-y-4 reveal">
+        <div class="wk-row"><div class="wk-day" data-i18n="weekend.friTitle"></div><p data-i18n="weekend.fri"></p></div>
+        <div class="wk-row"><div class="wk-day" data-i18n="weekend.satTitle"></div><p data-i18n="weekend.sat"></p></div>
+        <div class="wk-row"><div class="wk-day" data-i18n="weekend.sunTitle"></div><p data-i18n="weekend.sun"></p></div>
+      </div>
+      <div class="card mt-8 reveal">
+        <p class="dt" data-i18n="weekend.doTitle"></p>
+        <p class="mt-2" data-i18n="weekend.doBody"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== RSVP ============================= -->
+  <section id="rsvp" class="py-20 sm:py-28 px-6 bg-green text-ivory">
+    <div class="max-w-xl mx-auto">
+      <div class="text-center reveal">
+        <p class="kicker !text-gold" data-i18n="rsvp.kicker"></p>
+        <h2 class="h2 !text-ivory" data-i18n="rsvp.title"></h2>
+        <span class="rule mx-auto"></span>
+        <p class="mt-4 text-ivory/85"><span data-i18n="rsvp.intro"></span></p>
+      </div>
+
+      <form id="rsvpForm" class="mt-10 space-y-5 reveal" novalidate>
+        <div>
+          <label class="lbl" for="f_name" data-i18n="rsvp.f_name"></label>
+          <input id="f_name" name="name" type="text" required class="inp" data-i18n-ph-attr="rsvp.f_name_ph" />
+        </div>
+        <div>
+          <label class="lbl" for="f_email" data-i18n="rsvp.f_email"></label>
+          <input id="f_email" name="email" type="email" class="inp" placeholder="you@email.com" />
+        </div>
+
+        <div>
+          <span class="lbl" data-i18n="rsvp.f_attending"></span>
+          <div class="grid grid-cols-2 gap-3">
+            <label class="radio-card"><input type="radio" name="attending" value="yes" required class="peer sr-only" /><span class="radio-face" data-i18n="rsvp.a_yes"></span></label>
+            <label class="radio-card"><input type="radio" name="attending" value="no" class="peer sr-only" /><span class="radio-face" data-i18n="rsvp.a_no"></span></label>
+          </div>
+        </div>
+
+        <!-- fields shown only when attending = yes -->
+        <div id="ifYes" class="space-y-5 hidden">
+          <div>
+            <label class="lbl" for="f_party" data-i18n="rsvp.f_party"></label>
+            <input id="f_party" name="party" type="number" min="1" value="1" inputmode="numeric" class="inp" />
+          </div>
+
+          <div>
+            <label class="lbl" for="f_diet" data-i18n="rsvp.f_diet"></label>
+            <textarea id="f_diet" name="dietary" rows="2" class="inp" data-i18n-ph-attr="rsvp.f_diet_ph"></textarea>
+            <p class="help" data-i18n="rsvp.f_diet_help"></p>
+          </div>
+
+          <div>
+            <span class="lbl" data-i18n="rsvp.f_events"></span>
+            <div class="space-y-2">
+              <label class="check-row"><input type="checkbox" name="events" value="wedding" checked /><span data-i18n="rsvp.e_wedding"></span></label>
+              <label class="check-row"><input type="checkbox" name="events" value="dayafter" /><span data-i18n="rsvp.e_dayafter"></span></label>
+            </div>
+          </div>
+
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <span class="lbl" data-i18n="rsvp.f_olympia"></span>
+              <div class="grid grid-cols-2 gap-2">
+                <label class="radio-card sm"><input type="radio" name="olympia" value="yes" class="peer sr-only" checked /><span class="radio-face" data-i18n="rsvp.yes"></span></label>
+                <label class="radio-card sm"><input type="radio" name="olympia" value="no" class="peer sr-only" /><span class="radio-face" data-i18n="rsvp.no"></span></label>
+              </div>
+            </div>
+            <div>
+              <span class="lbl" data-i18n="rsvp.f_bus"></span>
+              <div class="grid grid-cols-2 gap-2">
+                <label class="radio-card sm"><input type="radio" name="bus" value="yes" class="peer sr-only" checked /><span class="radio-face" data-i18n="rsvp.yes"></span></label>
+                <label class="radio-card sm"><input type="radio" name="bus" value="no" class="peer sr-only" /><span class="radio-face" data-i18n="rsvp.no"></span></label>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <span class="lbl" data-i18n="rsvp.f_return"></span>
+            <div class="grid grid-cols-2 gap-3">
+              <label class="radio-card sm"><input type="radio" name="returnBus" value="early" class="peer sr-only" /><span class="radio-face" data-i18n="rsvp.r_early"></span></label>
+              <label class="radio-card sm"><input type="radio" name="returnBus" value="late" class="peer sr-only" checked /><span class="radio-face" data-i18n="rsvp.r_late"></span></label>
+            </div>
+          </div>
+
+          <div>
+            <label class="lbl" for="f_song" data-i18n="rsvp.f_song"></label>
+            <input id="f_song" name="song" type="text" class="inp" data-i18n-ph-attr="rsvp.f_song_ph" />
+          </div>
+        </div>
+
+        <div>
+          <label class="lbl" for="f_message" data-i18n="rsvp.f_message"></label>
+          <textarea id="f_message" name="message" rows="3" class="inp"></textarea>
+        </div>
+
+        <button type="submit" id="rsvpSubmit" class="w-full min-h-[52px] rounded-full bg-gold px-6 py-3.5 font-semibold uppercase tracking-wider text-green hover:bg-goldD transition-colors disabled:opacity-60" data-i18n="rsvp.submit"></button>
+
+        <p id="rsvpMsg" class="hidden text-center font-medium rounded-lg px-4 py-3"></p>
+        <p class="help !text-ivory/55 text-center" data-i18n="rsvp.demoNote"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============================== GIFTS ============================ -->
+  <section id="gifts" class="py-20 sm:py-28 px-6 bg-sand">
+    <div class="max-w-xl mx-auto text-center reveal">
+      <p class="kicker" data-i18n="gifts.kicker"></p>
+      <h2 class="h2" data-i18n="gifts.title"></h2>
+      <span class="rule mx-auto"></span>
+      <p class="mt-5" data-i18n="gifts.body"></p>
+
+      <div class="mt-8 rounded-2xl bg-green text-ivory p-6 text-left">
+        <p class="text-[0.7rem] uppercase tracking-widest text-gold" data-i18n="gifts.holderLabel"></p>
+        <p class="font-display text-2xl mb-4"><span data-i18n="gifts.holder"></span></p>
+        <p class="text-[0.7rem] uppercase tracking-widest text-gold" data-i18n="gifts.ibanLabel"></p>
+        <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-1">
+          <code id="ibanVal" class="font-mono text-lg tracking-wide flex-1 break-all"></code>
+          <button id="ibanCopy" class="shrink-0 min-h-[44px] rounded-full bg-gold px-5 py-2 text-sm font-semibold text-green hover:bg-goldD transition-colors" data-i18n="gifts.copy"></button>
+        </div>
+      </div>
+      <p class="text-sm text-ink/70 mt-5" data-i18n="gifts.sobre"></p>
+    </div>
+  </section>
+
+  <!-- ========================== GOOD TO KNOW ========================= -->
+  <section id="gtk" class="py-20 sm:py-28 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center reveal">
+        <p class="kicker" data-i18n="gtk.kicker"></p>
+        <h2 class="h2" data-i18n="gtk.title"></h2>
+        <span class="rule mx-auto"></span>
+      </div>
+      <div id="gtkGrid" class="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5 reveal"></div>
+    </div>
+  </section>
+
+  <!-- ============================== FAQ ============================== -->
+  <section id="faq" class="py-20 sm:py-28 px-6 bg-sand">
+    <div class="max-w-2xl mx-auto">
+      <div class="text-center reveal">
+        <p class="kicker" data-i18n="faq.kicker"></p>
+        <h2 class="h2" data-i18n="faq.title"></h2>
+        <span class="rule mx-auto"></span>
+      </div>
+      <div id="faqList" class="mt-10 reveal"></div>
+    </div>
+  </section>
+
+  <!-- ============================= PHOTOS ============================ -->
+  <section id="photos" class="py-20 sm:py-28 px-6">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center reveal max-w-2xl mx-auto">
+        <p class="kicker" data-i18n="photos.kicker"></p>
+        <h2 class="h2" data-i18n="photos.title"></h2>
+        <span class="rule mx-auto"></span>
+        <p class="lead mt-4" data-i18n="photos.body"></p>
+      </div>
+      <div id="gallery" class="mt-10 grid grid-cols-2 sm:grid-cols-3 gap-3 reveal"></div>
+      <p class="note mt-8 reveal max-w-xl mx-auto"><span data-i18n="photos.share"></span></p>
+    </div>
+  </section>
+
+  <!-- ============================= FOOTER ============================ -->
+  <footer class="bg-green text-ivory/80 py-14 px-6 text-center">
+    <p class="font-script text-5xl text-ivory">Evi <span class="text-gold">&amp;</span> Pepe</p>
+    <p class="mt-3 text-sm tracking-wide" data-i18n="footer.date"></p>
+    <p class="mt-4 text-sm text-ivory/60" data-i18n="footer.madeWith"></p>
+    <div class="lang-switch inline-flex items-center rounded-full border border-ivory/25 overflow-hidden text-xs font-semibold mt-6">
+      <button data-lang="en" class="lang-btn">EN</button>
+      <button data-lang="es" class="lang-btn">ES</button>
+      <button data-lang="de" class="lang-btn">DE</button>
+    </div>
+  </footer>
+
+  <!-- lightbox -->
+  <div id="lightbox" class="fixed inset-0 z-[60] hidden items-center justify-center bg-green/95 p-4">
+    <button id="lbClose" class="absolute top-3 right-4 w-11 h-11 text-ivory text-4xl leading-none">&times;</button>
+    <img id="lbImg" src="" alt="" class="max-h-[88vh] max-w-[92vw] rounded-lg object-contain" />
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
