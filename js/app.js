@@ -9,7 +9,7 @@ const CONFIG = {
   // Paste the deployed Google Apps Script web-app URL here when ready.
   // While it stays as the placeholder below, the form runs in DEMO MODE:
   // submissions are logged to the browser console instead of being sent.
-  GOOGLE_APPS_SCRIPT_URL: "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE",
+  GOOGLE_APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbxt1Dib7GYhMlUnDWKZ7bE0_6u-yVo1WswkChZalFWYb_OZy_UgrB5e2OVfyB3dwCKfoQ/exec",
 
   // Wedding day — Fri 28 May 2027, ceremony ~18:00 local (Europe/Madrid, UTC+2).
   WEDDING_DATE: new Date("2027-05-28T18:00:00+02:00"),
@@ -26,6 +26,12 @@ const CONFIG = {
    ---------------------------------------------------------------------- */
 const $  = (sel, root = document) => root.querySelector(sel);
 const $$ = (sel, root = document) => [...root.querySelectorAll(sel)];
+
+// true once a real Apps Script web-app URL has been set in CONFIG
+function rsvpEndpointConfigured() {
+  const url = CONFIG.GOOGLE_APPS_SCRIPT_URL;
+  return !!url && /^https?:\/\//.test(url) && !url.includes("PASTE_YOUR");
+}
 
 // resolve "a.b.c" against the active language dictionary
 let LANG = CONFIG.DEFAULT_LANG;
@@ -202,6 +208,10 @@ function setupRsvp() {
   const ifYes = $("#ifYes");
   const msg = $("#rsvpMsg");
 
+  // the "demo mode" note is only relevant until the endpoint is wired up
+  const demoNote = $("#rsvpDemoNote");
+  if (demoNote && rsvpEndpointConfigured()) demoNote.classList.add("hidden");
+
   // show/hide conditional block based on attending
   function syncAttending() {
     const val = (form.querySelector('input[name="attending"]:checked') || {}).value;
@@ -237,20 +247,20 @@ function setupRsvp() {
     btn.disabled = true;
     btn.textContent = t("rsvp.sending");
 
-    const isConfigured =
-      CONFIG.GOOGLE_APPS_SCRIPT_URL &&
-      /^https?:\/\//.test(CONFIG.GOOGLE_APPS_SCRIPT_URL) &&
-      !CONFIG.GOOGLE_APPS_SCRIPT_URL.includes("PASTE_YOUR");
-
     try {
-      if (!isConfigured) {
+      if (!rsvpEndpointConfigured()) {
         // DEMO MODE — no endpoint yet. Log so the UI is fully testable locally.
         console.log("[RSVP demo] endpoint not configured — submission:", data);
         await new Promise((r) => setTimeout(r, 500));
       } else {
+        // Apps Script web apps redirect through googleusercontent.com, which
+        // doesn't send CORS headers — so use no-cors. The request still reaches
+        // the script (the row is written); the response is opaque, which is fine
+        // because we don't need to read it. Body stays text/plain (a "simple"
+        // request) so there's no preflight.
         await fetch(CONFIG.GOOGLE_APPS_SCRIPT_URL, {
           method: "POST",
-          // Apps Script web apps accept simple requests; this avoids a CORS preflight.
+          mode: "no-cors",
           headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(data),
         });

@@ -7,6 +7,25 @@
   <meta name="description" content="Evi & Pepe are getting married on Friday 28 May 2027 in Valencia, Spain. All the details: venue, schedule, travel, hotel and RSVP." />
   <meta name="theme-color" content="#19332B" />
 
+  <!-- Favicon / app icons -->
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon-32.png" sizes="32x32" type="image/png" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+  <!-- Social share preview (WhatsApp / iMessage / Open Graph / Twitter) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://evi-pepe-wedding.vercel.app/" />
+  <meta property="og:title" content="Evi & Pepe · 28 May 2027 · Valencia" />
+  <meta property="og:description" content="We're getting married! Join us on Friday 28 May 2027 in Valencia, Spain." />
+  <meta property="og:image" content="https://evi-pepe-wedding.vercel.app/images/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Evi & Pepe · 28 May 2027 · Valencia" />
+  <meta name="twitter:description" content="We're getting married! Join us on Friday 28 May 2027 in Valencia, Spain." />
+  <meta name="twitter:image" content="https://evi-pepe-wedding.vercel.app/images/og-image.jpg" />
+
   <!-- Tailwind via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -356,7 +375,7 @@
         <button type="submit" id="rsvpSubmit" class="w-full min-h-[52px] rounded-full bg-gold px-6 py-3.5 font-semibold uppercase tracking-wider text-green hover:bg-goldD transition-colors disabled:opacity-60" data-i18n="rsvp.submit"></button>
 
         <p id="rsvpMsg" class="hidden text-center font-medium rounded-lg px-4 py-3"></p>
-        <p class="help !text-ivory/55 text-center" data-i18n="rsvp.demoNote"></p>
+        <p id="rsvpDemoNote" class="help !text-ivory/55 text-center" data-i18n="rsvp.demoNote"></p>
       </form>
     </div>
   </section>
