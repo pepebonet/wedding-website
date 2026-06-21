@@ -153,7 +153,7 @@ function tickCountdown() {
 /* ----------------------------------------------------------------------
    Gallery + lightbox
    ---------------------------------------------------------------------- */
-const GALLERY = ["01", "02", "03", "04", "05", "06", "08", "09", "10"].map((n, i) => (
+const GALLERY = ["01", "03", "04", "05", "06", "08"].map((n, i) => (
   { src: `images/gallery-${n}.webp`, alt: `Evi & Pepe — photo ${i + 1}` }
 ));
 function buildGallery() {

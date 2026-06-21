@@ -40,12 +40,12 @@ window.I18N = {
     story: {
       kicker: "Our story",
       title: "How we got here",
-      body: "It started in Maastricht. Evi was doing her degree and Pepe was doing his master's, and we met through Saturnus, the university's gymnastics club, back around 2017. For a while, life took us in different directions — Pepe moved to Barcelona for his PhD. But in 2021 our paths crossed again, and this time they didn't separate. Since then we've built a life together across three cities: back in Maastricht, then Groningen, and now Frankfurt, where we've happily settled these past couple of years — and where we plan to stay for many more. On 28 May 2027, in Valencia, we'd love to celebrate the next chapter with you.",
+      body: "It started in Maastricht. Evi was doing her degree and Pepe was doing his master's, and we met through Saturnus, the university's gymnastics club, back around 2016. For a while, life took us in different directions — Pepe moved to Barcelona for his PhD. But in 2021 our paths crossed again, and this time they didn't separate. Since then we've built a life together across three cities: back in Maastricht, then Groningen, and now Frankfurt, where we've happily settled these past couple of years. On 28 May 2027, in Valencia, we'd love to celebrate the next chapter with you.",
     },
     details: {
       kicker: "The venue",
       title: "El Telar",
-      lead: "A lovingly restored 12th-century weaving mill on the edge of Valencia — stone, greenery and Mediterranean light.",
+      lead: "El Telar de Miguel Martí — a lovingly restored 12th-century weaving mill on the edge of Valencia, renowned in the region for its gastronomy under acclaimed chef Miguel Martí.",
       desc: "Both the ceremony and the banquet happen here, with an indoor salon and an outdoor garden and patio. Everything in one place — no rushing between locations.",
       addressLabel: "Address",
       address: "Pza. del Canónigo s/n, 46035 Benimàmet, Valencia",
@@ -53,7 +53,7 @@ window.I18N = {
       website: "Venue website",
       contactLabel: "Venue contact",
       dressLabel: "Dress code",
-      dress: "Formal / cocktail. Late May in Valencia is warm, so go for light fabrics — and bring a light layer for when it cools down around 4am. The ceremony is partly on grass, so block heels beat stilettos.",
+      dress: "Formal / black tie. Gentlemen in a suit and tie; ladies in a long dress or gown. Every colour is welcome — except white, which is reserved for the bride. Late May in Valencia can get warm, but come chic regardless (or we might just send you home to change!).",
     },
     schedule: {
       kicker: "The day",
@@ -151,7 +151,7 @@ window.I18N = {
     gifts: {
       kicker: "Gifts",
       title: "Your presence is the present",
-      body: "Truly — having you travel to celebrate with us is the greatest gift. If you'd also like to help us start married life, a contribution towards our honeymoon is warmly appreciated. We're all in the eurozone, so a SEPA transfer is free for everyone.",
+      body: "Truly — having you travel to celebrate with us is the greatest gift. If you'd also like to help us start married life, a contribution towards our honeymoon is warmly appreciated.",
       holderLabel: "Account holder",
       holder: "{{TBD}}",
       ibanLabel: "IBAN",
@@ -165,7 +165,6 @@ window.I18N = {
       title: "A few helpful bits",
       items: [
         { t: "Currency", d: "The euro (€). Cards are accepted almost everywhere." },
-        { t: "Tipping", d: "Not expected — round up or leave a little if you enjoyed the service." },
         { t: "Emergencies", d: "Dial 112 for police, ambulance or fire, anywhere in Spain." },
         { t: "Weather", d: "Late-May Valencia is warm and sunny by day, cooler around 4am — bring a light layer for the evening." },
         { t: "A little Spanish", d: "Hola (hi) · Gracias (thanks) · Salud (cheers) · ¿Dónde está…? (where is…?)" },
@@ -179,7 +178,7 @@ window.I18N = {
         { q: "Are kids welcome?", a: "Details coming soon — {{TBD}}." },
         { q: "Can I bring a plus-one?", a: "Your invitation will say who's included. If you're unsure, just ask us." },
         { q: "What time should I arrive?", a: "The bus leaves the hotel around 17:00 and the ceremony starts at 18:00 — please be seated 15 minutes before." },
-        { q: "What's the dress code?", a: "Formal / cocktail, heat-aware. Light fabrics, a layer for late night, and block heels for the grass." },
+        { q: "What's the dress code?", a: "Formal / black tie. Suit and tie for men, a long dress or gown for women. Any colour except white. It can get warm, but come chic!" },
         { q: "How do I get there?", a: "Stay at the Olympia and take our wedding bus — no car needed. Full travel and bus info is above." },
         { q: "What languages will there be?", a: "Our crowd is Spanish, German and Dutch — expect a happy mix. This site is in English, Spanish and German." },
       ],
@@ -230,12 +229,12 @@ window.I18N = {
     story: {
       kicker: "Nuestra historia",
       title: "Cómo llegamos hasta aquí",
-      body: "Todo empezó en Maastricht. Evi estudiaba su carrera y Pepe hacía su máster, y nos conocimos en Saturnus, el club de gimnasia de la universidad, allá por 2017. Durante un tiempo la vida nos llevó por caminos distintos: Pepe se mudó a Barcelona para hacer el doctorado. Pero en 2021 nuestros caminos volvieron a cruzarse, y esta vez no se separaron. Desde entonces hemos construido una vida juntos en tres ciudades: de nuevo en Maastricht, luego en Groninga y ahora en Fráncfort, donde llevamos un par de años muy felices y donde pensamos quedarnos muchos más. El 28 de mayo de 2027, en Valencia, nos encantaría celebrar contigo el siguiente capítulo.",
+      body: "Todo empezó en Maastricht. Evi estudiaba su carrera y Pepe hacía su máster, y nos conocimos en Saturnus, el club de gimnasia de la universidad, allá por 2016. Durante un tiempo la vida nos llevó por caminos distintos: Pepe se mudó a Barcelona para hacer el doctorado. Pero en 2021 nuestros caminos volvieron a cruzarse, y esta vez no se separaron. Desde entonces hemos construido una vida juntos en tres ciudades: de nuevo en Maastricht, luego en Groninga y ahora en Fráncfort, donde llevamos un par de años muy felices. El 28 de mayo de 2027, en Valencia, nos encantaría celebrar contigo el siguiente capítulo.",
     },
     details: {
       kicker: "El lugar",
       title: "El Telar",
-      lead: "Un molino de tejer del siglo XII restaurado con mimo, a las afueras de Valencia: piedra, vegetación y luz mediterránea.",
+      lead: "El Telar de Miguel Martí — un molino de tejer del siglo XII restaurado con mimo, a las afueras de Valencia, muy reconocido en la zona por su gastronomía de la mano del prestigioso chef Miguel Martí.",
       desc: "La ceremonia y el banquete son aquí, con salón interior y jardín y patio exteriores. Todo en el mismo sitio, sin prisas ni traslados.",
       addressLabel: "Dirección",
       address: "Pza. del Canónigo s/n, 46035 Benimàmet, Valencia",
@@ -243,7 +242,7 @@ window.I18N = {
       website: "Web del lugar",
       contactLabel: "Contacto del lugar",
       dressLabel: "Código de vestimenta",
-      dress: "Formal / cóctel. A finales de mayo Valencia es cálida: tejidos ligeros y una capa fina para cuando refresque hacia las 4 de la mañana. Parte de la ceremonia es sobre césped, así que mejor tacón ancho que de aguja.",
+      dress: "Formal / etiqueta. Ellos, con traje y corbata; ellas, con vestido largo. Todos los colores son bienvenidos — excepto el blanco, reservado para la novia. A finales de mayo Valencia puede apretar de calor, pero venid impecables igualmente (¡o quizá os mandemos a casa a cambiaros!).",
     },
     schedule: {
       kicker: "El día",
@@ -341,7 +340,7 @@ window.I18N = {
     gifts: {
       kicker: "Regalos",
       title: "Tu presencia es el regalo",
-      body: "De verdad: que vengas a celebrarlo con nosotros es el mejor regalo. Si además quieres ayudarnos a empezar esta etapa, agradecemos de corazón una aportación para nuestra luna de miel. Estamos todos en la zona euro, así que una transferencia SEPA es gratuita.",
+      body: "De verdad: que vengas a celebrarlo con nosotros es el mejor regalo. Si además quieres ayudarnos a empezar esta etapa, agradecemos de corazón una aportación para nuestra luna de miel.",
       holderLabel: "Titular de la cuenta",
       holder: "{{TBD}}",
       ibanLabel: "IBAN",
@@ -355,7 +354,6 @@ window.I18N = {
       title: "Algunos detalles útiles",
       items: [
         { t: "Moneda", d: "El euro (€). Se acepta tarjeta casi en todas partes." },
-        { t: "Propinas", d: "No son obligatorias: redondea o deja algo si te ha gustado el servicio." },
         { t: "Emergencias", d: "Marca el 112 para policía, ambulancia o bomberos en toda España." },
         { t: "Clima", d: "A finales de mayo Valencia es cálida y soleada de día y fresca hacia las 4; lleva una capa fina para la noche." },
         { t: "Algo de español", d: "Hola · Gracias · Salud · ¿Dónde está…?" },
@@ -369,7 +367,7 @@ window.I18N = {
         { q: "¿Pueden venir niños?", a: "Pronto daremos detalles — {{TBD}}." },
         { q: "¿Puedo llevar acompañante?", a: "Tu invitación indicará quién está incluido. Si tienes dudas, pregúntanos." },
         { q: "¿A qué hora debo llegar?", a: "El autobús sale del hotel sobre las 17:00 y la ceremonia empieza a las 18:00; toma asiento 15 minutos antes." },
-        { q: "¿Cómo es el código de vestimenta?", a: "Formal / cóctel, pensando en el calor. Tejidos ligeros, una capa para la noche y tacón ancho para el césped." },
+        { q: "¿Cómo es el código de vestimenta?", a: "Formal / etiqueta. Traje y corbata ellos, vestido largo ellas. Cualquier color menos el blanco. Puede hacer calor, pero venid impecables." },
         { q: "¿Cómo llego?", a: "Alójate en el Olympia y usa nuestro autobús: no necesitas coche. Toda la info de viaje y autobús está arriba." },
         { q: "¿En qué idiomas será?", a: "Somos gente de España, Alemania y los Países Bajos: una mezcla feliz. Esta web está en inglés, español y alemán." },
       ],
@@ -420,12 +418,12 @@ window.I18N = {
     story: {
       kicker: "Unsere Geschichte",
       title: "Wie wir hierher kamen",
-      body: "Angefangen hat alles in Maastricht. Evi machte ihr Studium, Pepe seinen Master, und wir lernten uns bei Saturnus kennen, dem Turnverein der Universität – ungefähr 2017. Eine Zeit lang führte uns das Leben in verschiedene Richtungen: Pepe ging für seine Promotion nach Barcelona. Doch 2021 kreuzten sich unsere Wege erneut – und diesmal trennten sie sich nicht mehr. Seitdem haben wir uns ein gemeinsames Leben in drei Städten aufgebaut: wieder in Maastricht, dann in Groningen und jetzt in Frankfurt, wo wir seit ein paar glücklichen Jahren zu Hause sind – und wo wir noch lange bleiben möchten. Am 28. Mai 2027 möchten wir in Valencia mit euch das nächste Kapitel feiern.",
+      body: "Angefangen hat alles in Maastricht. Evi machte ihr Studium, Pepe seinen Master, und wir lernten uns bei Saturnus kennen, dem Turnverein der Universität – ungefähr 2016. Eine Zeit lang führte uns das Leben in verschiedene Richtungen: Pepe ging für seine Promotion nach Barcelona. Doch 2021 kreuzten sich unsere Wege erneut – und diesmal trennten sie sich nicht mehr. Seitdem haben wir uns ein gemeinsames Leben in drei Städten aufgebaut: wieder in Maastricht, dann in Groningen und jetzt in Frankfurt, wo wir seit ein paar glücklichen Jahren zu Hause sind. Am 28. Mai 2027 möchten wir in Valencia mit euch das nächste Kapitel feiern.",
     },
     details: {
       kicker: "Die Location",
       title: "El Telar",
-      lead: "Eine liebevoll restaurierte Webmühle aus dem 12. Jahrhundert am Rand von Valencia — Stein, Grün und mediterranes Licht.",
+      lead: "El Telar de Miguel Martí — eine liebevoll restaurierte Webmühle aus dem 12. Jahrhundert am Rand von Valencia, in der Region bekannt für ihre Gastronomie unter dem renommierten Chefkoch Miguel Martí.",
       desc: "Trauung und Bankett finden beide hier statt, mit Innensaal sowie Garten und Patio im Freien. Alles an einem Ort — kein Wechsel zwischen Locations.",
       addressLabel: "Adresse",
       address: "Pza. del Canónigo s/n, 46035 Benimàmet, Valencia",
@@ -433,7 +431,7 @@ window.I18N = {
       website: "Website der Location",
       contactLabel: "Kontakt der Location",
       dressLabel: "Dresscode",
-      dress: "Festlich / Cocktail. Ende Mai ist es in Valencia warm — also leichte Stoffe, und eine dünne Schicht für später, wenn es gegen 4 Uhr kühler wird. Die Trauung ist teils auf Rasen, daher sind Blockabsätze besser als Stilettos.",
+      dress: "Festlich / Black Tie. Die Herren mit Anzug und Krawatte, die Damen im langen Kleid. Alle Farben sind willkommen — außer Weiß, das ist der Braut vorbehalten. Ende Mai kann es in Valencia warm werden, kommt aber trotzdem schick (sonst schicken wir euch vielleicht zum Umziehen nach Hause!).",
     },
     schedule: {
       kicker: "Der Tag",
@@ -531,7 +529,7 @@ window.I18N = {
     gifts: {
       kicker: "Geschenke",
       title: "Ihr seid das Geschenk",
-      body: "Wirklich — dass ihr anreist, um mit uns zu feiern, ist das größte Geschenk. Wenn ihr uns zusätzlich in den gemeinsamen Start helfen möchtet, freuen wir uns sehr über einen Beitrag zu unserer Hochzeitsreise. Wir sind alle in der Eurozone, eine SEPA-Überweisung ist also für alle kostenlos.",
+      body: "Wirklich — dass ihr anreist, um mit uns zu feiern, ist das größte Geschenk. Wenn ihr uns zusätzlich in den gemeinsamen Start helfen möchtet, freuen wir uns sehr über einen Beitrag zu unserer Hochzeitsreise.",
       holderLabel: "Kontoinhaber",
       holder: "{{TBD}}",
       ibanLabel: "IBAN",
@@ -545,7 +543,6 @@ window.I18N = {
       title: "Ein paar hilfreiche Hinweise",
       items: [
         { t: "Währung", d: "Der Euro (€). Karten werden fast überall akzeptiert." },
-        { t: "Trinkgeld", d: "Kein Muss — aufrunden oder etwas dalassen, wenn der Service gut war." },
         { t: "Notruf", d: "Wählt 112 für Polizei, Krankenwagen oder Feuerwehr, überall in Spanien." },
         { t: "Wetter", d: "Ende Mai ist Valencia tagsüber warm und sonnig, gegen 4 Uhr kühler — nehmt eine dünne Schicht für abends mit." },
         { t: "Etwas Spanisch", d: "Hola (Hallo) · Gracias (Danke) · Salud (Prost) · ¿Dónde está…? (Wo ist…?)" },
@@ -559,7 +556,7 @@ window.I18N = {
         { q: "Sind Kinder willkommen?", a: "Details folgen bald — {{TBD}}." },
         { q: "Darf ich eine Begleitung mitbringen?", a: "Eure Einladung nennt, wer eingeschlossen ist. Wenn ihr unsicher seid, fragt uns einfach." },
         { q: "Wann sollte ich da sein?", a: "Der Bus fährt gegen 17:00 am Hotel ab, die Trauung beginnt um 18:00 — bitte nehmt 15 Minuten vorher Platz." },
-        { q: "Wie ist der Dresscode?", a: "Festlich / Cocktail, hitzetauglich. Leichte Stoffe, eine Schicht für die Nacht und Blockabsätze für den Rasen." },
+        { q: "Wie ist der Dresscode?", a: "Festlich / Black Tie. Anzug und Krawatte für die Herren, langes Kleid für die Damen. Jede Farbe außer Weiß. Es kann warm werden — kommt trotzdem schick!" },
         { q: "Wie komme ich hin?", a: "Wohnt im Olympia und nehmt unseren Hochzeitsbus — kein Auto nötig. Alle Infos zu Anreise und Bus stehen oben." },
         { q: "In welchen Sprachen wird gefeiert?", a: "Unsere Runde kommt aus Spanien, Deutschland und den Niederlanden — ein fröhlicher Mix. Diese Seite gibt es auf Englisch, Spanisch und Deutsch." },
       ],
