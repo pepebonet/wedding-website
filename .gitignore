@@ -1,0 +1,8 @@
+.DS_Store
+node_modules/
+.vercel
+*.log
+
+# Raw original photo library (~60MB) — kept locally, not committed.
+# The curated source set (images/curated/) and served WebP are versioned instead.
+images/src/
