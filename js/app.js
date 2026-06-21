@@ -9,7 +9,7 @@ const CONFIG = {
   // Paste the deployed Google Apps Script web-app URL here when ready.
   // While it stays as the placeholder below, the form runs in DEMO MODE:
   // submissions are logged to the browser console instead of being sent.
-  GOOGLE_APPS_SCRIPT_URL: "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE",
+  GOOGLE_APPS_SCRIPT_URL: "https://script.google.com/macros/s/AKfycbxt1Dib7GYhMlUnDWKZ7bE0_6u-yVo1WswkChZalFWYb_OZy_UgrB5e2OVfyB3dwCKfoQ/exec",
 
   // Wedding day — Fri 28 May 2027, ceremony ~18:00 local (Europe/Madrid, UTC+2).
   WEDDING_DATE: new Date("2027-05-28T18:00:00+02:00"),
