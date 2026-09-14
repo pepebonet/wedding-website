@@ -75,7 +75,8 @@ Single-page, mobile-first **static site**. Plain **HTML + CSS + JS**, **Tailwind
   client-side form). It is NOT a credential to the Google account. `doPost` only appends; `doGet`
   returns a static health message — no read/exfiltration path. Only realistic risk = spam rows.
   Optional hardening (not yet done): honeypot field or shared token.
-- Sheet: https://docs.google.com/spreadsheets/d/1Ns6ZoCDpiMnAOFBLXqnigj3z4y0aefHIJc-1VWo0mII/edit
+- Sheet: private — the RSVP Google Sheet URL is intentionally NOT stored here (repo is public).
+  Ask the owner (pepebonet) for the link if needed.
 - After editing `Code.gs`: redeploy via Deploy ▸ Manage deployments ▸ New version (URL stays same).
 
 ## Hotel booking (added in `olympia-booking-code`)
