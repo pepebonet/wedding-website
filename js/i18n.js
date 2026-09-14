@@ -97,7 +97,7 @@ window.I18N = {
         "Pick your room type and add it to the cart",
         "Follow the steps to complete your booking",
       ],
-      roomblock: "This personal code unlocks our group rate. Booking deadline: {{TBD}}",
+      roomblock: "This personal code unlocks our group rate — the sooner you book, the better, so we can all stay in the same place.",
       alt: "More options will be added soon — but you're very welcome to stay wherever suits you best.",
     },
     bus: {
@@ -298,7 +298,7 @@ window.I18N = {
         "Elegir tipo de habitación y añadir al carrito",
         "Seguir las instrucciones para formalizar la reserva",
       ],
-      roomblock: "Este código personal os da nuestra tarifa de grupo. Fecha límite de reserva: {{TBD}}",
+      roomblock: "Este código personal os da nuestra tarifa de grupo. Cuanto antes reservéis, mejor, para poder alojarnos todos en el mismo sitio.",
       alt: "Pronto añadiremos más opciones, pero podéis alojaros donde mejor os venga.",
     },
     bus: {
@@ -499,7 +499,7 @@ window.I18N = {
         "Wählt euren Zimmertyp und legt ihn in den Warenkorb",
         "Folgt den Schritten, um die Buchung abzuschließen",
       ],
-      roomblock: "Dieser persönliche Code schaltet unseren Gruppentarif frei. Buchungsfrist: {{TBD}}",
+      roomblock: "Dieser persönliche Code schaltet unseren Gruppentarif frei — je früher ihr bucht, desto besser, damit wir alle am selben Ort wohnen können.",
       alt: "Weitere Optionen folgen bald — ihr könnt aber gern dort übernachten, wo es euch am besten passt.",
     },
     bus: {
