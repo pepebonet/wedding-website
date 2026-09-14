@@ -18,6 +18,14 @@ Single-page, mobile-first **static site**. Plain **HTML + CSS + JS**, **Tailwind
 ## Repo / git
 - GitHub: `git@github.com:pepebonet/wedding-website.git`
 - Default branch: **`master`**.
+- **Commit author MUST be `pepebonet`.** GitHub username is `pepebonet`. Before committing,
+  ensure git is configured as:
+  `git config user.name "Pepe Bonet"` and
+  `git config user.email "47359276+pepebonet@users.noreply.github.com"`.
+  (This machine's default was `pepebogi5@gmail.com`, which is NOT the GitHub identity and caused
+  Vercel to block deployments — "Git author ... must have access to the project on Vercel".
+  The `pepebogi5@gmail.com` email is now verified on the GitHub account, but always author as
+  `pepebonet` via the noreply email above.)
 - **Workflow (user's preference):** for each change → branch off fresh `master`
   (`git checkout master && git pull`), edit, verify locally, push, open PR via `gh`.
   User merges PRs themselves. Keep history linear (rebase, not merge-commits into feature branch).
@@ -67,7 +75,8 @@ Single-page, mobile-first **static site**. Plain **HTML + CSS + JS**, **Tailwind
   client-side form). It is NOT a credential to the Google account. `doPost` only appends; `doGet`
   returns a static health message — no read/exfiltration path. Only realistic risk = spam rows.
   Optional hardening (not yet done): honeypot field or shared token.
-- Sheet: https://docs.google.com/spreadsheets/d/1Ns6ZoCDpiMnAOFBLXqnigj3z4y0aefHIJc-1VWo0mII/edit
+- Sheet: private — the RSVP Google Sheet URL is intentionally NOT stored here (repo is public).
+  Ask the owner (pepebonet) for the link if needed.
 - After editing `Code.gs`: redeploy via Deploy ▸ Manage deployments ▸ New version (URL stays same).
 
 ## Hotel booking (added in `olympia-booking-code`)
