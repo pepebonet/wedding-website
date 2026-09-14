@@ -77,6 +77,10 @@ function render() {
   // IBAN value
   applyText($("#ibanVal"), t("gifts.iban"));
 
+  // Hotel booking code + steps
+  applyText($("#stayCodeVal"), t("stay.code"));
+  renderStaySteps();
+
   // active state on every language switcher
   $$(".lang-btn").forEach((b) => b.classList.toggle("active", b.dataset.lang === LANG));
 }
@@ -88,6 +92,18 @@ function renderTimeline() {
     const li = document.createElement("li");
     li.className = "tl-item" + (CONFIG.TIMELINE_HIGHLIGHT.includes(i) ? " highlight" : "");
     li.innerHTML = `<div class="tl-time">${escapeHtml(it.time)}</div><div class="tl-label">${escapeHtml(it.label)}</div>`;
+    ol.appendChild(li);
+  });
+}
+
+function renderStaySteps() {
+  const ol = $("#staySteps");
+  if (!ol) return;
+  ol.innerHTML = "";
+  (t("stay.steps") || []).forEach((step) => {
+    const li = document.createElement("li");
+    li.className = "pl-1";
+    li.textContent = step;
     ol.appendChild(li);
   });
 }
@@ -182,13 +198,12 @@ function closeLightbox() { $("#lightbox").classList.remove("show"); }
 /* ----------------------------------------------------------------------
    IBAN copy
    ---------------------------------------------------------------------- */
-function copyIban() {
-  const val = $("#ibanVal").textContent.trim();
+function copyValue(valEl, btnEl, copiedKey) {
+  const val = valEl.textContent.trim();
   const done = () => {
-    const btn = $("#ibanCopy");
-    const orig = t("gifts.copy");
-    btn.textContent = t("gifts.copied");
-    setTimeout(() => (btn.textContent = orig), 1800);
+    const orig = btnEl.textContent;
+    btnEl.textContent = t(copiedKey);
+    setTimeout(() => (btnEl.textContent = orig), 1800);
   };
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(val).then(done).catch(done);
@@ -336,7 +351,10 @@ function setupChrome() {
   $$(".lang-btn").forEach((b) => b.addEventListener("click", () => setLang(b.dataset.lang)));
 
   // IBAN copy
-  $("#ibanCopy").addEventListener("click", copyIban);
+  $("#ibanCopy").addEventListener("click", () => copyValue($("#ibanVal"), $("#ibanCopy"), "gifts.copied"));
+
+  // Hotel booking code copy
+  $("#stayCodeCopy").addEventListener("click", () => copyValue($("#stayCodeVal"), $("#stayCodeCopy"), "stay.copied"));
 }
 
 /* ----------------------------------------------------------------------

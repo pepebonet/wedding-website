@@ -248,6 +248,18 @@
           <a class="btn-outline" target="_blank" rel="noopener" href="https://www.olympiahotelvalencia.com" data-i18n="stay.website"></a>
           <a class="btn-outline" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Olympia+Hotel+Events+Spa+Alboraya">Maps</a>
         </div>
+
+        <!-- Booking code + how-to -->
+        <div class="mt-8 rounded-2xl bg-green text-ivory p-6 text-left">
+          <p class="text-[0.7rem] uppercase tracking-widest text-gold" data-i18n="stay.codeLabel"></p>
+          <div class="flex flex-col sm:flex-row sm:items-center gap-3 mt-1">
+            <code id="stayCodeVal" class="font-mono text-lg tracking-wide flex-1 break-all"></code>
+            <button id="stayCodeCopy" class="shrink-0 min-h-[44px] rounded-full bg-gold px-5 py-2 text-sm font-semibold text-green hover:bg-goldD transition-colors" data-i18n="stay.copy"></button>
+          </div>
+          <p class="mt-6 text-[0.7rem] uppercase tracking-widest text-gold" data-i18n="stay.bookingTitle"></p>
+          <ol id="staySteps" class="mt-3 space-y-2 text-sm list-decimal list-inside marker:text-gold marker:font-semibold"></ol>
+        </div>
+
         <p class="note mt-6"><span data-i18n="stay.roomblock"></span></p>
         <p class="text-sm text-ink/70 mt-4" data-i18n="stay.alt"></p>
       </div>
