@@ -40,7 +40,7 @@ window.I18N = {
     story: {
       kicker: "Our story",
       title: "How we got here",
-      body: "It started in Maastricht. Evi was doing her degree and Pepe was doing his master's, and we met through Saturnus, the university's gymnastics club, back around 2016. For a while, life took us in different directions — Pepe moved to Barcelona for his PhD. But in 2021 our paths crossed again, and this time they didn't separate. Since then we've built a life together across three cities: back in Maastricht, then Groningen, and now Frankfurt, where we've happily settled these past couple of years. On 28 May 2027, in Valencia, we'd love to celebrate the next chapter with you.",
+      body: "It started in Maastricht. Evi was doing her bachelor's and Pepe was doing his master's, and we met through Saturnus, the university's gymnastics club, back around 2016. For a while, life took us in different directions — Pepe moved to Barcelona for his PhD. But in 2021 our paths crossed again, and this time they didn't separate. Since then we've built a life together across three cities: back in Maastricht, then Groningen, and now Frankfurt, where we've happily settled these past couple of years. On 28 May 2027, in Valencia, we'd love to celebrate the next chapter with you.",
     },
     details: {
       kicker: "The venue",
@@ -241,7 +241,7 @@ window.I18N = {
     story: {
       kicker: "Nuestra historia",
       title: "Cómo llegamos hasta aquí",
-      body: "Todo empezó en Maastricht. Evi estudiaba su carrera y Pepe hacía su máster, y nos conocimos en Saturnus, el club de gimnasia de la universidad, allá por 2016. Durante un tiempo la vida nos llevó por caminos distintos: Pepe se mudó a Barcelona para hacer el doctorado. Pero en 2021 nuestros caminos volvieron a cruzarse, y esta vez no se separaron. Desde entonces hemos construido una vida juntos en tres ciudades: de nuevo en Maastricht, luego en Groninga y ahora en Fráncfort, donde llevamos un par de años muy felices. El 28 de mayo de 2027, en Valencia, nos encantaría celebrar contigo el siguiente capítulo.",
+      body: "Todo empezó en Maastricht. Evi hacía su grado y Pepe hacía su máster, y nos conocimos en Saturnus, el club de gimnasia de la universidad, allá por 2016. Durante un tiempo la vida nos llevó por caminos distintos: Pepe se mudó a Barcelona para hacer el doctorado. Pero en 2021 nuestros caminos volvieron a cruzarse, y esta vez no se separaron. Desde entonces hemos construido una vida juntos en tres ciudades: de nuevo en Maastricht, luego en Groninga y ahora en Fráncfort, donde llevamos un par de años muy felices. El 28 de mayo de 2027, en Valencia, nos encantaría celebrar contigo el siguiente capítulo.",
     },
     details: {
       kicker: "El lugar",
@@ -442,7 +442,7 @@ window.I18N = {
     story: {
       kicker: "Unsere Geschichte",
       title: "Wie wir hierher kamen",
-      body: "Angefangen hat alles in Maastricht. Evi machte ihr Studium, Pepe seinen Master, und wir lernten uns bei Saturnus kennen, dem Turnverein der Universität – ungefähr 2016. Eine Zeit lang führte uns das Leben in verschiedene Richtungen: Pepe ging für seine Promotion nach Barcelona. Doch 2021 kreuzten sich unsere Wege erneut – und diesmal trennten sie sich nicht mehr. Seitdem haben wir uns ein gemeinsames Leben in drei Städten aufgebaut: wieder in Maastricht, dann in Groningen und jetzt in Frankfurt, wo wir seit ein paar glücklichen Jahren zu Hause sind. Am 28. Mai 2027 möchten wir in Valencia mit euch das nächste Kapitel feiern.",
+      body: "Angefangen hat alles in Maastricht. Evi machte ihren Bachelor, Pepe seinen Master, und wir lernten uns bei Saturnus kennen, dem Turnverein der Universität – ungefähr 2016. Eine Zeit lang führte uns das Leben in verschiedene Richtungen: Pepe ging für seine Promotion nach Barcelona. Doch 2021 kreuzten sich unsere Wege erneut – und diesmal trennten sie sich nicht mehr. Seitdem haben wir uns ein gemeinsames Leben in drei Städten aufgebaut: wieder in Maastricht, dann in Groningen und jetzt in Frankfurt, wo wir seit ein paar glücklichen Jahren zu Hause sind. Am 28. Mai 2027 möchten wir in Valencia mit euch das nächste Kapitel feiern.",
     },
     details: {
       kicker: "Die Location",
